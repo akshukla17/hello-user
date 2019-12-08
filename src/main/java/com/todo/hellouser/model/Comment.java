@@ -1,4 +1,4 @@
-package com.todo.hellouser.service;
+package com.todo.hellouser.model;
 
 public class Comment {
 

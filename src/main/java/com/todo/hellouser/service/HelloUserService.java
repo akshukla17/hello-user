@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.todo.hellouser.exception.NoDataFoundException;
+import com.todo.hellouser.model.Comment;
 import com.todo.hellouser.model.Post;
 import com.todo.hellouser.model.User;
 
@@ -29,6 +30,7 @@ public class HelloUserService {
 	private String baseUrl;
 
 	public static final String EMAIL_VALIDATION_REGEX="^[A-Za-z0-9_.-]+@[A-Za-z0-9_.-]+$";
+	
 	/**
 	 * api call to fetch user data by username
 	 * 
