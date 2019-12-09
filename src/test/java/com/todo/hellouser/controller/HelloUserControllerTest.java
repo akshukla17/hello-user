@@ -12,7 +12,7 @@ import com.todo.hellouser.HelloUserApplicationTests;
 public class HelloUserControllerTest extends HelloUserApplicationTests{
 
 	@Test
-	public void returnListOfEmailIFUsernameExist() throws Exception {
+	public void returnListOfEmailIfUsernameExist() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders.get("https://jsonplaceholder.typicode.com/users?username=Samantha")
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
@@ -31,17 +31,6 @@ public class HelloUserControllerTest extends HelloUserApplicationTests{
 				.andExpect(MockMvcResultMatchers.status().is(400))
 				.andExpect(jsonPath("$.message").value("username should not be empty or null"));
 	}
-	
-//	@Test
-//	public void exteptionWhenValidEmailListEmpty() throws Exception {
-//		
-//		mockMvc.perform(MockMvcRequestBuilders.get("https://jsonplaceholder.typicode.com/users?username=Samantha")
-//				.accept(MediaType.APPLICATION_JSON)
-//				.contentType(MediaType.APPLICATION_JSON)
-//				)
-//				.andExpect(MockMvcResultMatchers.status().is(400))
-//				.andExpect(jsonPath("$.message").value("username should not be empty or null"));
-//	}
 	
 	@Test
 	public void exceptionWhenUsernameNotExist() throws Exception {
